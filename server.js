@@ -54,6 +54,12 @@ app.get("/api/profiles", async (req, res) => {
   }
 });
 
+app.get("/", async (req, res) => {
+  res.status(200).json({ message: "Page loaded successfully" });
+  console.log("Running");
+  return "Running";
+});
+
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
 });
